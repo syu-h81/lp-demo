@@ -6,7 +6,7 @@ const notoSansJp = Noto_Sans_JP({
 });
 
 const heroBackgroundImage =
-  "https://www.figma.com/api/mcp/asset/0cfb3807-1443-4257-8aa5-eacb616670c5";
+  "/images/hero-content-bg.jpg";
 
 const stripeBackground =
   "repeating-linear-gradient(120deg, #7d7d7d 0 40px, #7d7d7d 40px 68px, transparent 68px 128px), repeating-linear-gradient(120deg, #ebe169 68px 108px, #ebe169 108px 136px, transparent 136px 196px)";
@@ -22,7 +22,7 @@ export function HeroSection() {
         style={{ backgroundImage: stripeBackground }}
       />
 
-      <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 sm:pt-9 lg:px-8">
+      <div className="mx-auto pt-6 sm:pt-9">
         <div className="relative overflow-hidden rounded-[28px] sm:rounded-[32px]">
           <div
             className="absolute inset-0 bg-cover bg-center"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Noto_Sans_JP } from "next/font/google";
 
 const notoSansJp = Noto_Sans_JP({
@@ -5,18 +6,18 @@ const notoSansJp = Noto_Sans_JP({
   weight: ["400", "700"],
 });
 
-const footerBackgroundImage =
-  "https://www.figma.com/api/mcp/asset/052c1a96-700b-4f20-9a1c-b8877777b4b4";
+const footerBackgroundImage = "/images/footer-bg.png";
 
 export function FooterSection() {
   return (
     <footer className={`${notoSansJp.className} relative overflow-hidden`}>
       <div className="absolute inset-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={footerBackgroundImage}
           alt=""
+          fill
           className="h-full w-full object-cover"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>

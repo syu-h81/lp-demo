@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Noto_Sans_JP } from "next/font/google";
 
 const notoSansJp = Noto_Sans_JP({
@@ -8,29 +9,25 @@ const notoSansJp = Noto_Sans_JP({
 const reasons = [
   {
     text: "防災情報は見ても、\n結局「何をすればいいか」まで落とし込めない",
-    avatar:
-      "https://www.figma.com/api/mcp/asset/5ace329e-552e-428c-bb27-2331a95368ba",
+    avatar: "/images/reason-icon-1.png",
     align: "left",
     flushTop: true,
   },
   {
     text: "地震が怖いけど、毎日忙しくて備えが続かない",
-    avatar:
-      "https://www.figma.com/api/mcp/asset/3a838d49-ef5b-44b0-a2fd-5759e2de7956",
+    avatar: "/images/reason-icon-2.png",
     align: "right",
     flushTop: false,
   },
   {
     text: "いざという時、家電が壊れたら出費が怖い\n（冷蔵庫・洗濯機の修理は特に痛い）",
-    avatar:
-      "https://www.figma.com/api/mcp/asset/9f71c9b1-a0e8-478a-9c8a-458be20902c9",
+    avatar: "/images/reason-icon-3.png",
     align: "left",
     flushTop: true,
   },
   {
     text: "情報も手続きもバラバラで、緊急時ほど迷う",
-    avatar:
-      "https://www.figma.com/api/mcp/asset/f71a95c4-7a5a-42b9-b3b4-7787bd0ef8f2",
+    avatar: "/images/reason-icon-4.png",
     align: "right",
     flushTop: false,
   },
@@ -45,10 +42,11 @@ function ReasonRow({ align, avatar, text, flushTop }: Reason) {
     <div className="flex w-full items-center justify-center gap-4 md:gap-[45px]">
       {!isRight && (
         <>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={avatar}
             alt=""
+            width={130}
+            height={130}
             className="hidden size-20 shrink-0 rounded-full md:block md:size-[110px] lg:size-[130px]"
           />
         </>
@@ -78,10 +76,11 @@ function ReasonRow({ align, avatar, text, flushTop }: Reason) {
 
       {isRight && (
         <>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={avatar}
             alt=""
+            width={130}
+            height={130}
             className="hidden size-20 shrink-0 rounded-full md:block md:size-[110px] lg:size-[130px]"
           />
         </>

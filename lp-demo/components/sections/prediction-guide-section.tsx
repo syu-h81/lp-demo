@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Noto_Sans_JP } from "next/font/google";
 
 const notoSansJp = Noto_Sans_JP({
@@ -5,8 +6,7 @@ const notoSansJp = Noto_Sans_JP({
   weight: ["700"],
 });
 
-const heroImage =
-  "https://www.figma.com/api/mcp/asset/4c31300f-989b-47a4-8ff6-8ebac491829c";
+const heroImage = "/images/prediction-guide.png";
 
 const points = [
   "予測・結果は 毎週火曜日・金曜日の更新予定\n（新たな予測・結果がない場合は更新なし）",
@@ -62,11 +62,13 @@ export function PredictionGuideSection() {
           </div>
 
           <div className="relative overflow-hidden rounded-[24px]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={heroImage}
               alt="火山地帯の風景"
+              width={499}
+              height={304}
               className="h-full w-full object-cover"
+              sizes="(min-width: 1024px) 40vw, 100vw"
             />
           </div>
         </div>
